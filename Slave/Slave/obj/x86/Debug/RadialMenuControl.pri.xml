@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="RadialMenuControl" version="1.0" primary="true">
+		<Qualifiers/>
+		<ResourceMapSubtree name="Files">
+			<ResourceMapSubtree name="RadialMenuControl">
+				<NamedResource name="RadialMenuControl.xr.xml" uri="ms-resource://RadialMenuControl/Files/RadialMenuControl/RadialMenuControl.xr.xml">
+					<Candidate type="Path">
+						<Value>RadialMenuControl\RadialMenuControl.xr.xml</Value>
+					</Candidate>
+				</NamedResource>
+				<ResourceMapSubtree name="Components">
+					<NamedResource name="CenterButton.xbf" uri="ms-resource://RadialMenuControl/Files/RadialMenuControl/Components/CenterButton.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="RadialMenuButton.xbf" uri="ms-resource://RadialMenuControl/Files/RadialMenuControl/Components/RadialMenuButton.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="Themes">
+					<NamedResource name="Generic.xbf" uri="ms-resource://RadialMenuControl/Files/RadialMenuControl/Themes/Generic.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="Styles.xbf" uri="ms-resource://RadialMenuControl/Files/RadialMenuControl/Themes/Styles.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="UserControl">
+					<NamedResource name="ListSubMenu.xbf" uri="ms-resource://RadialMenuControl/Files/RadialMenuControl/UserControl/ListSubMenu.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="MeterSubMenu.xbf" uri="ms-resource://RadialMenuControl/Files/RadialMenuControl/UserControl/MeterSubMenu.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="Pie.xbf" uri="ms-resource://RadialMenuControl/Files/RadialMenuControl/UserControl/Pie.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="PieSlice.xbf" uri="ms-resource://RadialMenuControl/Files/RadialMenuControl/UserControl/PieSlice.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="RadialMenu.xbf" uri="ms-resource://RadialMenuControl/Files/RadialMenuControl/UserControl/RadialMenu.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>
