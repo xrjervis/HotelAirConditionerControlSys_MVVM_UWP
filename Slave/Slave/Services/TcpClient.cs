@@ -32,7 +32,7 @@ namespace Slave.Services
             {
                 //The server hostname that we will be establishing a connection to. We will be running the server and client locally,
                 //so we will use localhost as the hostname.
-                Windows.Networking.HostName serverHost = new Windows.Networking.HostName("127.0.0.1");
+                Windows.Networking.HostName serverHost = new Windows.Networking.HostName("192.168.43.26");
 
                 //Every protocol typically has a standard port number. For example HTTP is typically 80, FTP is 20 and 21, etc.
                 //For the echo server/client application we will use a random port 8080.

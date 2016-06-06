@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>c868d65f-f547-4743-9c28-046e67cf3b16</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\Jervis\Desktop\Slave\Slave\obj\x86\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>B86A23A18949B2F215C0005341EF782DEAC6EE212569E2F1175B2D46F9D166DB</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>6C69F39D8EE0E2ED9ACF71A299955D9EA2C05556EA1996E1560E0BD945CFA409</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>c868d65f-f547-4743-9c28-046e67cf3b16_1.0.0.0_x86__rbtjahz8x97y8</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>c868d65f-f547-4743-9c28-046e67cf3b16_rbtjahz8x97y8!App</RegisteredUserModeAppID>
     <RegisteredPackageID>c868d65f-f547-4743-9c28-046e67cf3b16</RegisteredPackageID>
@@ -22,13 +22,13 @@
     <AppXManifest Include="C:\Users\Jervis\Desktop\Slave\Slave\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-06-05T18:36:19.271</Modified>
+      <Modified>2016-06-06T03:47:41.849</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Jervis\Desktop\Slave\Slave\bin\x86\Debug\Slave.exe">
       <PackagePath>entrypoint\Slave.exe</PackagePath>
-      <Modified>2016-06-05T18:36:18.343</Modified>
+      <Modified>2016-06-06T03:46:07.262</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jervis\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -462,6 +462,21 @@
       <PackagePath>Template10Library.dll</PackagePath>
       <Modified>2016-05-19T10:47:34.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jervis\Desktop\Slave\Slave\Assets\Square150x150Logo.png">
+      <PackagePath>Assets\Square150x150Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-05T20:49:49.408</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jervis\Desktop\Slave\Slave\Assets\Square150x150Logo.scale-100.png">
+      <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-04T03:32:55.001</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jervis\Desktop\Slave\Slave\Assets\Square150x150Logo.scale-150.png">
+      <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-04T03:32:54.993</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jervis\Desktop\Slave\Slave\Assets\start.PNG">
       <PackagePath>Assets\start.PNG</PackagePath>
       <Modified>2016-06-04T08:11:23.571</Modified>
@@ -550,11 +565,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jervis\Desktop\Slave\Slave\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-06-05T18:36:18.958</Modified>
+      <Modified>2016-06-06T03:47:41.623</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jervis\Desktop\Slave\Slave\bin\x86\Debug\Core\Slave.exe">
       <PackagePath>Slave.exe</PackagePath>
-      <Modified>2016-06-05T18:36:19.268</Modified>
+      <Modified>2016-06-06T03:47:41.847</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

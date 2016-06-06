@@ -90,14 +90,14 @@ namespace Slave.ViewModels
 
                 switch (speed)
                 {
-                    case "低":
-                        speed = "中";
+                    case "Low":
+                        speed = "Medium";
                         break;
-                    case "中":
-                        speed = "高";
+                    case "Medium":
+                        speed = "High";
                         break;
-                    case "高":
-                        speed = "低";
+                    case "High":
+                        speed = "Low";
                         break;
                 }
 
@@ -133,11 +133,11 @@ namespace Slave.ViewModels
 
                 switch (workmode)
                 {
-                    case "制冷":
-                        workmode = "制热";
+                    case "Cooling":
+                        workmode = "Heating";
                         break;
-                    case "制热":
-                        workmode = "制冷";
+                    case "Heating":
+                        workmode = "Cooling";
                         break;
                 }
 
@@ -158,6 +158,8 @@ namespace Slave.ViewModels
                 Views.Busy.SetBusy(false);
             }, () => !string.IsNullOrEmpty(BusyText)));
         #endregion
+
+
     }
 }
 

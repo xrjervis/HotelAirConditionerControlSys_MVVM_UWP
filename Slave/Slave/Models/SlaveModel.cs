@@ -71,15 +71,15 @@ namespace Slave.Models
             }
         }
         /// <summary>
-        /// 是否正忙
+        /// 是否工作
         /// </summary>
-        private bool _isBusy;
-        public bool IsBusy
+        private bool _isWorking;
+        public bool IsWorking
         {
-            get { return _isBusy; }
+            get { return _isWorking; }
             set
             {
-                Set(ref _isBusy, value);
+                Set(ref _isWorking, value);
             }
         }
         #endregion
@@ -97,10 +97,11 @@ namespace Slave.Models
         public SlaveModel()
         {
             _cost = 0.0f;
-            _cTemp = 25;
-            _dTemp = 18;
-            _speed = "低";
-            _workMode = "制冷";
+            _cTemp = 29;
+            _dTemp = 25;
+            _speed = "Medium";
+            _workMode = "Cooling";
+            _isWorking = true;
         }
     }
 }

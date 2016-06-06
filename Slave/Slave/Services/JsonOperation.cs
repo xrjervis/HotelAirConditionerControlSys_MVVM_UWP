@@ -52,18 +52,18 @@ namespace Slave.Services
             try
             {
                 JObject initObject = JObject.Parse(text);
-                Debug.WriteLine(initObject["Dtemp"].ToString());
-                Debug.WriteLine(initObject["Ctemp"].ToString());
-                Debug.WriteLine(initObject["speed"].ToString());
-                Debug.WriteLine(initObject["workmode"].ToString());
+                if (initObject["Type"].ToString().Equals("ack"))
+                {
+                    SlaveModel.GetInstance().DTemp = Int32.Parse(initObject["Action"]["Dtemp"].ToString());
+                    SlaveModel.GetInstance().CTemp = Int32.Parse(initObject["Action"]["Ctemp"].ToString());
+                    SlaveModel.GetInstance().Speed = initObject["Action"]["speed"].ToString();
+                    SlaveModel.GetInstance().WorkMode = initObject["Action"]["workmode"].ToString();
+                    SlaveModel.GetInstance().Cost = 0.0f;
 
-                SlaveModel.GetInstance().DTemp = Int32.Parse(initObject["Dtemp"].ToString());
-                SlaveModel.GetInstance().CTemp = Int32.Parse(initObject["Ctemp"].ToString());
-                SlaveModel.GetInstance().Speed = initObject["speed"].ToString();
-                SlaveModel.GetInstance().WorkMode = initObject["workmode"].ToString();
-                SlaveModel.GetInstance().Cost = 0.0f;
-
-                return true;
+                    return true;
+                }
+                else
+                    return false;
             }
             catch (Exception e)
             {
