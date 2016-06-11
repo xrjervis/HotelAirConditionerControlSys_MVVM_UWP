@@ -9,11 +9,14 @@
       xmlns:local="using:Slave.Views"
       xmlns:s="Slave.Services"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-      mc:Ignorable="d" Height="425.333" Width="874">
-
+      mc:Ignorable="d" Height="425.333" Width="1013"
+      xmlns:converters="using:Slave.Converters">
+    <Page.Resources>
+        <converters:StringFormatConverter x:Key="StringFormatConverter" />
+    </Page.Resources>
 
     <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="AdaptiveVisualStateGroup">
                 <VisualState x:Name="VisualStateNarrow">
@@ -91,16 +94,12 @@
                      RelativePanel.AlignLeftWithPanel="True"
                      RelativePanel.AlignBottomWithPanel="True">
             <CommandBar.Content>
-                <TextBlock Text="{x:Bind VM.Slave.Cost, Mode=OneWay}" Margin="200,14" FontWeight="Bold" FontSize="18"/>
+                <TextBlock Text="{x:Bind VM.Slave.Cost, Mode=OneWay,Converter={StaticResource StringFormatConverter}}" Margin="200,14" FontWeight="Bold" FontSize="18"/>
             </CommandBar.Content>
 
             <AppBarButton Icon="Sync" 
                           Label="风速"
                           Command ="{x:Bind VM.ChangeSpeedCommand}"/>
-            <AppBarButton Icon="View"
-                          Label="工作模式"
-                          Command ="{x:Bind VM.ChangeWorkModeCommand}"/>
-            <AppBarButton Icon="Switch" Label="送风模式"/>
 
         </CommandBar>
 
@@ -110,7 +109,7 @@
                    FontSize="18"
                    Margin="72,388,-72.333,-391"/>
 
-        <Grid Margin="0,48,-874,0" Height="329" VerticalAlignment="Top">
+        <Grid Margin="10,48,-1013,0" Height="329" VerticalAlignment="Top" HorizontalAlignment="Left" Width="1003">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0*"/>
                 <ColumnDefinition Width="297*"/>
@@ -125,46 +124,41 @@
                           VerticalAlignment="Top"
                           Height="329"/>
 
-            <TextBlock x:Name="textBlock" 
-                       Grid.ColumnSpan="2"
+            <TextBlock x:Name="textBlock"
                        HorizontalAlignment="Left"
-                       Margin="59,76,0,0"
+                       Margin="10,76,0,0"
                        TextWrapping="Wrap"
-                       Text="{x:Bind VM.Slave.CTemp,Mode=TwoWay}"
+                       Text="{x:Bind VM.Slave.CTemp,Mode=TwoWay,Converter={StaticResource StringFormatConverter}}"
                        VerticalAlignment="Top"
-                       FontSize="120" 
+                       FontSize="96" 
                        FontFamily="Kristen ITC"
                        Height="133" 
-                       Width="144"/>
+                       Width="218" Grid.Column="1"/>
 
-            <TextBlock x:Name="textBlock2"
-                       Grid.ColumnSpan="2" 
-                       HorizontalAlignment="Left" 
-                       Margin="203,109,0,0"
+            <TextBlock x:Name="textBlock2" 
+                       Margin="245,109,41,0"
                        TextWrapping="Wrap"
                        Text="°C"
                        VerticalAlignment="Top" 
                        FontFamily="Kristen ITC" 
                        FontWeight="Bold" 
                        FontSize="36" 
-                       Height="49"
-                       Width="55"/>
+                       Height="49" Grid.Column="1"/>
 
             <TextBlock x:Name="textBlock_Copy"
                        HorizontalAlignment="Left" 
-                       Margin="52.667,76,0,0" 
+                       Margin="10,76,0,0" 
                        TextWrapping="Wrap"
-                       Text="{x:Bind VM.Slave.DTemp, Mode=TwoWay}" 
+                       Text="{x:Bind VM.Slave.DTemp, Mode=TwoWay,Converter={StaticResource StringFormatConverter}}" 
                        VerticalAlignment="Top" 
-                       FontSize="120" 
+                       FontSize="96" 
                        FontFamily="Kristen ITC" 
                        Height="133" 
-                       Width="142" 
+                       Width="214" 
                        Grid.Column="2"/>
 
-            <TextBlock x:Name="textBlock2_Copy"
-                       HorizontalAlignment="Left" 
-                       Margin="195,109,0,0" 
+            <TextBlock x:Name="textBlock2_Copy" 
+                       Margin="231,109,41.333,0" 
                        TextWrapping="Wrap" 
                        Text="°C" 
                        VerticalAlignment="Top" 
@@ -172,66 +166,58 @@
                        FontWeight="Bold"
                        FontSize="36" 
                        Grid.Column="2" 
-                       Height="49" 
-                       Width="50"/>
+                       Height="49"/>
 
             <Slider x:Name="slider"
-                    Grid.ColumnSpan="2"
-                    HorizontalAlignment="Left"
-                    Margin="256,109,0,0"
-                    VerticalAlignment="Top" 
-                    Width="33" Maximum="30" 
+                    Margin="298,109,10,0"
+                    VerticalAlignment="Top" Maximum="30" 
                     Orientation="Vertical" 
                     Height="100"
-                    Value="{x:Bind textBlock.Text, Mode=TwoWay}" Minimum="18"/>
+                    Value="{x:Bind textBlock.Text, Mode=OneWay}" Minimum="18" Grid.Column="1"/>
 
-            <Slider x:Name="slider_Copy"
-                    HorizontalAlignment="Left" 
-                    Margin="240,109,0,0" 
+            <Slider x:Name="slider_Copy" 
+                    Margin="279,109,10.333,0" 
                     VerticalAlignment="Top"
-                    Width="33"
                     Maximum="30"
                     Orientation="Vertical" 
                     Height="100"
                     Grid.Column="2" 
                     Minimum="18"
-                    Value="{x:Bind textBlock_Copy.Text, Mode=TwoWay}"/>
+                    Value="{x:Bind VM.SliderValueDTemp, Mode=TwoWay}"
+                    PointerCaptureLost="{x:Bind VM.ChangeDTempCommand}" SmallChange="0.5" StepFrequency="0.5" TickFrequency="1"/>
 
-            <TextBlock x:Name="textBlock1" 
-                       Grid.ColumnSpan="2"
-                       Margin="10,290,193,0" 
+            <TextBlock x:Name="textBlock1"
+                       Margin="6,290,193,0" 
                        TextWrapping="Wrap" 
                        Text="当前风速：" 
                        VerticalAlignment="Top"
                        Height="29" 
                        FontSize="18"
                        FontWeight="Bold"
-                       FontFamily="Script MT Bold"/>
+                       FontFamily="Script MT Bold" Grid.Column="1"/>
 
             <TextBlock x:Name="textBlock1_Copy" 
-                       Grid.ColumnSpan="2" 
-                       Margin="109,290,158,0" 
+                       Margin="105,290,0,0" 
                        TextWrapping="Wrap"  
                        Text="{x:Bind VM.Slave.Speed, Mode=OneWay}" 
                        VerticalAlignment="Top"
                        Height="29" 
                        FontSize="18" 
                        FontWeight="Bold" 
-                       FontFamily="Script MT Bold"/>
+                       FontFamily="Script MT Bold" HorizontalAlignment="Left" Width="135" Grid.Column="1"/>
 
             <TextBlock x:Name="textBlock1_Copy1"
-                       Grid.ColumnSpan="2"
-                       Margin="203,290,0,0" 
+                       Margin="0,290,187,0" 
                        TextWrapping="Wrap" 
                        Text="工作模式："
                        VerticalAlignment="Top" 
                        Height="29" 
                        FontSize="18" 
                        FontWeight="Bold"
-                       FontFamily="Script MT Bold"/>
+                       FontFamily="Script MT Bold" Grid.Column="2"/>
 
             <TextBlock x:Name="textBlock1_Copy2"
-                       Margin="10,290,218,0"
+                       Margin="103,290,0,0"
                        TextWrapping="Wrap" 
                        Text="{x:Bind VM.Slave.WorkMode,Mode=OneWay}"
                        VerticalAlignment="Top"
@@ -239,19 +225,18 @@
                        FontSize="18" 
                        FontWeight="Bold" 
                        FontFamily="Script MT Bold"
-                       Grid.Column="2"/>
+                       Grid.Column="2" HorizontalAlignment="Left" Width="178"/>
 
 
-            <TextBlock x:Name="textBlock1_Copy5" 
-            	Grid.ColumnSpan="2"
-            	Margin="90,47,113,0" 
+            <TextBlock x:Name="textBlock1_Copy5"
+            	Margin="86,47,113,0" 
             	TextWrapping="Wrap" 
             	Text="当前温度" 
             	VerticalAlignment="Top"
             	Height="29" 
             	FontSize="18"
             	FontWeight="Bold"
-            	FontFamily="Script MT Bold"/>
+            	FontFamily="Script MT Bold" Grid.Column="1"/>
             <TextBlock x:Name="textBlock1_Copy6"
             	Margin="89,47,98,0" 
             	TextWrapping="Wrap" 

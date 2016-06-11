@@ -9,6 +9,7 @@ using Slave;
 using Slave.Models;
 using Slave.Services;
 using Windows.UI.Xaml.Data;
+using System.Diagnostics;
 
 namespace Slave.ViewModels
 {
@@ -27,9 +28,12 @@ namespace Slave.ViewModels
                 Value = "Designtime value";
             }
         }
-        
+
         #region 属性
-        string _Value ="从控机";
+        private double _SliderValueDTemp = SlaveModel.GetInstance().DTemp;
+        public double SliderValueDTemp { get { return _SliderValueDTemp; } set { Set(ref _SliderValueDTemp, value); } }
+
+        string _Value = "从控机";
         public string Value { get { return _Value; } set { Set(ref _Value, value); } }
         string _BusyText = "请稍后......";
         public string BusyText
@@ -81,11 +85,12 @@ namespace Slave.ViewModels
         public DelegateCommand ChangeSpeedCommand
             => _ChangeSpeedCommand ?? (_ChangeSpeedCommand = new DelegateCommand(async () =>
             {
+
                 Views.Busy.SetBusy(true, _BusyText);
 
                 string speed = SlaveModel.GetInstance().Speed;
-                int dtemp = SlaveModel.GetInstance().DTemp;
-                int ctemp = SlaveModel.GetInstance().CTemp;
+                double dtemp = SlaveModel.GetInstance().DTemp;
+                double ctemp = SlaveModel.GetInstance().CTemp;
                 string workmode = SlaveModel.GetInstance().WorkMode;
 
                 switch (speed)
@@ -107,10 +112,11 @@ namespace Slave.ViewModels
                 //等待Ack
                 while (true)
                 {
+
                     string JsonString = await TcpClient.GetInstance().WaitTcpServer();
                     if (JsonOperation.GetInstance().DeserializeJson("ack", JsonString))
                     {
-                        SlaveModel.GetInstance().Cost = float.Parse(JsonOperation.GetInstance().DeserializeJson(JsonString));
+                        SlaveModel.GetInstance().Cost += double.Parse(JsonOperation.GetInstance().DeserializeJson(JsonString));
                         SlaveModel.GetInstance().Speed = speed;
                         break;
                     }
@@ -119,44 +125,33 @@ namespace Slave.ViewModels
             }, () => !string.IsNullOrEmpty(BusyText)));
         #endregion
 
-        #region ChangeWorkModeCommand:改变工作模式命令
-        DelegateCommand _ChangeWorkModeCommand;
-        public DelegateCommand ChangeWorkModeCommand
-            => _ChangeWorkModeCommand ?? (_ChangeWorkModeCommand = new DelegateCommand(async () =>
+        #region ChangeDTempCommand:改变目标温度命令
+        public async void ChangeDTempCommand()
+        {
+            Views.Busy.SetBusy(true, _BusyText);
+
+            string speed = SlaveModel.GetInstance().Speed;
+            double dtemp = SliderValueDTemp;
+            double ctemp = SlaveModel.GetInstance().CTemp;
+            string workmode = SlaveModel.GetInstance().WorkMode;
+
+
+            string message = JsonOperation.GetInstance().PraseJson(2, "req", dtemp, ctemp, speed, workmode);
+            //向服务器请求链接
+            await TcpClient.GetInstance().SendToTcpServer(message);
+            //等待Ack
+            while (true)
             {
-                Views.Busy.SetBusy(true, _BusyText);
-
-                string speed = SlaveModel.GetInstance().Speed;
-                int dtemp = SlaveModel.GetInstance().DTemp;
-                int ctemp = SlaveModel.GetInstance().CTemp;
-                string workmode = SlaveModel.GetInstance().WorkMode;
-
-                switch (workmode)
+                string JsonString = await TcpClient.GetInstance().WaitTcpServer();
+                if (JsonOperation.GetInstance().DeserializeJson("ack", JsonString))
                 {
-                    case "Cooling":
-                        workmode = "Heating";
-                        break;
-                    case "Heating":
-                        workmode = "Cooling";
-                        break;
+                    SlaveModel.GetInstance().Cost += double.Parse(JsonOperation.GetInstance().DeserializeJson(JsonString));
+                    SlaveModel.GetInstance().DTemp = SliderValueDTemp;
+                    break;
                 }
-
-                string message = JsonOperation.GetInstance().PraseJson(2, "req", dtemp, ctemp, speed, workmode);
-                //向服务器请求链接
-                await TcpClient.GetInstance().SendToTcpServer(message);
-                //等待Ack
-                while (true)
-                {
-                    string JsonString = await TcpClient.GetInstance().WaitTcpServer();
-                    if (JsonOperation.GetInstance().DeserializeJson("ack", JsonString))
-                    {
-                        SlaveModel.GetInstance().Cost = float.Parse(JsonOperation.GetInstance().DeserializeJson(JsonString));
-                        SlaveModel.GetInstance().WorkMode = workmode;
-                        break;
-                    }
-                }
-                Views.Busy.SetBusy(false);
-            }, () => !string.IsNullOrEmpty(BusyText)));
+            }
+            Views.Busy.SetBusy(false);
+        }
         #endregion
 
 

@@ -22,10 +22,10 @@ namespace Slave.Services
             return _JsonOperation;
         }
 
-        public string PraseJson(int no, string type, int Dtemp, int Ctemp, string speed, string workmode)
+        public string PraseJson(int no, string type, double Dtemp, double Ctemp, string speed, string workmode)
         {
             string text =
-            "{\"From\":"+no.ToString()+",\"Type\":\""+type+"\",\"Action\":{\"Dtemp\":\""+Dtemp.ToString()+"\",\"Ctemp\":\""+Ctemp.ToString()+"\",\"speed\":\""+speed+"\",\"workmode\":\""+workmode+"\"}}";
+            "{\"From\":"+no.ToString()+",\"Type\":\""+type+"\",\"Action\":{\"Dtemp\":"+Dtemp.ToString("0.0")+",\"Ctemp\":"+Ctemp.ToString("0.0")+",\"speed\":\""+speed+"\",\"workmode\":\""+workmode+"\"}}";
             Debug.WriteLine(text);
             return text;
         }
@@ -54,11 +54,11 @@ namespace Slave.Services
                 JObject initObject = JObject.Parse(text);
                 if (initObject["Type"].ToString().Equals("ack"))
                 {
-                    SlaveModel.GetInstance().DTemp = Int32.Parse(initObject["Action"]["Dtemp"].ToString());
-                    SlaveModel.GetInstance().CTemp = Int32.Parse(initObject["Action"]["Ctemp"].ToString());
+                    SlaveModel.GetInstance().DTemp = Double.Parse(initObject["Action"]["Dtemp"].ToString());
+                    SlaveModel.GetInstance().CTemp = 29.0;
                     SlaveModel.GetInstance().Speed = initObject["Action"]["speed"].ToString();
                     SlaveModel.GetInstance().WorkMode = initObject["Action"]["workmode"].ToString();
-                    SlaveModel.GetInstance().Cost = 0.0f;
+                    SlaveModel.GetInstance().Cost = 0.0;
 
                     return true;
                 }

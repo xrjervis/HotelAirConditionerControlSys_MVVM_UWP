@@ -17,5 +17,6 @@ namespace Slave.Views
             NavigationCacheMode = NavigationCacheMode.Enabled;
         }
 
+
     }
 }

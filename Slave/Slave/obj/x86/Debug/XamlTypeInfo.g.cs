@@ -156,7 +156,7 @@ namespace Slave.Slave_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[65];
+            _typeNameTable = new string[66];
             _typeNameTable[0] = "Template10.Common.BootStrapper";
             _typeNameTable[1] = "Windows.UI.Xaml.Application";
             _typeNameTable[2] = "Template10.Common.StateItems";
@@ -214,16 +214,17 @@ namespace Slave.Slave_XamlTypeInfo
             _typeNameTable[54] = "Template10.Common.IStateItems";
             _typeNameTable[55] = "Slave.Views.DetailPage";
             _typeNameTable[56] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[57] = "Slave.Views.MainPage";
-            _typeNameTable[58] = "Slave.ViewModels.SettingsPageViewModel";
-            _typeNameTable[59] = "Slave.ViewModels.SettingsPartViewModel";
-            _typeNameTable[60] = "Slave.ViewModels.AboutPartViewModel";
-            _typeNameTable[61] = "Slave.Views.SettingsPage";
-            _typeNameTable[62] = "Slave.Views.Shell";
-            _typeNameTable[63] = "Slave.Views.Splash";
-            _typeNameTable[64] = "Slave.App";
+            _typeNameTable[57] = "Slave.Converters.StringFormatConverter";
+            _typeNameTable[58] = "Slave.Views.MainPage";
+            _typeNameTable[59] = "Slave.ViewModels.SettingsPageViewModel";
+            _typeNameTable[60] = "Slave.ViewModels.SettingsPartViewModel";
+            _typeNameTable[61] = "Slave.ViewModels.AboutPartViewModel";
+            _typeNameTable[62] = "Slave.Views.SettingsPage";
+            _typeNameTable[63] = "Slave.Views.Shell";
+            _typeNameTable[64] = "Slave.Views.Splash";
+            _typeNameTable[65] = "Slave.App";
 
-            _typeTable = new global::System.Type[65];
+            _typeTable = new global::System.Type[66];
             _typeTable[0] = typeof(global::Template10.Common.BootStrapper);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Application);
             _typeTable[2] = typeof(global::Template10.Common.StateItems);
@@ -281,14 +282,15 @@ namespace Slave.Slave_XamlTypeInfo
             _typeTable[54] = typeof(global::Template10.Common.IStateItems);
             _typeTable[55] = typeof(global::Slave.Views.DetailPage);
             _typeTable[56] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[57] = typeof(global::Slave.Views.MainPage);
-            _typeTable[58] = typeof(global::Slave.ViewModels.SettingsPageViewModel);
-            _typeTable[59] = typeof(global::Slave.ViewModels.SettingsPartViewModel);
-            _typeTable[60] = typeof(global::Slave.ViewModels.AboutPartViewModel);
-            _typeTable[61] = typeof(global::Slave.Views.SettingsPage);
-            _typeTable[62] = typeof(global::Slave.Views.Shell);
-            _typeTable[63] = typeof(global::Slave.Views.Splash);
-            _typeTable[64] = typeof(global::Slave.App);
+            _typeTable[57] = typeof(global::Slave.Converters.StringFormatConverter);
+            _typeTable[58] = typeof(global::Slave.Views.MainPage);
+            _typeTable[59] = typeof(global::Slave.ViewModels.SettingsPageViewModel);
+            _typeTable[60] = typeof(global::Slave.ViewModels.SettingsPartViewModel);
+            _typeTable[61] = typeof(global::Slave.ViewModels.AboutPartViewModel);
+            _typeTable[62] = typeof(global::Slave.Views.SettingsPage);
+            _typeTable[63] = typeof(global::Slave.Views.Shell);
+            _typeTable[64] = typeof(global::Slave.Views.Splash);
+            _typeTable[65] = typeof(global::Slave.App);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -335,13 +337,14 @@ namespace Slave.Slave_XamlTypeInfo
         private object Activate_49_Busy() { return new global::Slave.Views.Busy(); }
         private object Activate_50_DetailPageViewModel() { return new global::Slave.ViewModels.DetailPageViewModel(); }
         private object Activate_55_DetailPage() { return new global::Slave.Views.DetailPage(); }
-        private object Activate_57_MainPage() { return new global::Slave.Views.MainPage(); }
-        private object Activate_58_SettingsPageViewModel() { return new global::Slave.ViewModels.SettingsPageViewModel(); }
-        private object Activate_59_SettingsPartViewModel() { return new global::Slave.ViewModels.SettingsPartViewModel(); }
-        private object Activate_60_AboutPartViewModel() { return new global::Slave.ViewModels.AboutPartViewModel(); }
-        private object Activate_61_SettingsPage() { return new global::Slave.Views.SettingsPage(); }
-        private object Activate_62_Shell() { return new global::Slave.Views.Shell(); }
-        private object Activate_64_App() { return new global::Slave.App(); }
+        private object Activate_57_StringFormatConverter() { return new global::Slave.Converters.StringFormatConverter(); }
+        private object Activate_58_MainPage() { return new global::Slave.Views.MainPage(); }
+        private object Activate_59_SettingsPageViewModel() { return new global::Slave.ViewModels.SettingsPageViewModel(); }
+        private object Activate_60_SettingsPartViewModel() { return new global::Slave.ViewModels.SettingsPartViewModel(); }
+        private object Activate_61_AboutPartViewModel() { return new global::Slave.ViewModels.AboutPartViewModel(); }
+        private object Activate_62_SettingsPage() { return new global::Slave.Views.SettingsPage(); }
+        private object Activate_63_Shell() { return new global::Slave.Views.Shell(); }
+        private object Activate_65_App() { return new global::Slave.App(); }
         private void MapAdd_2_StateItems(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.String, global::System.Object>)instance;
@@ -774,59 +777,66 @@ namespace Slave.Slave_XamlTypeInfo
                 xamlType = new global::Slave.Slave_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 57:   //  Slave.Views.MainPage
-                userType = new global::Slave.Slave_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_57_MainPage;
+            case 57:   //  Slave.Converters.StringFormatConverter
+                userType = new global::Slave.Slave_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_57_StringFormatConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 58:   //  Slave.ViewModels.SettingsPageViewModel
+            case 58:   //  Slave.Views.MainPage
+                userType = new global::Slave.Slave_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_58_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 59:   //  Slave.ViewModels.SettingsPageViewModel
                 userType = new global::Slave.Slave_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Template10.Mvvm.ViewModelBase"));
-                userType.Activator = Activate_58_SettingsPageViewModel;
+                userType.Activator = Activate_59_SettingsPageViewModel;
                 userType.AddMemberName("SettingsPartViewModel");
                 userType.AddMemberName("AboutPartViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 59:   //  Slave.ViewModels.SettingsPartViewModel
+            case 60:   //  Slave.ViewModels.SettingsPartViewModel
                 userType = new global::Slave.Slave_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Template10.Mvvm.ViewModelBase"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 60:   //  Slave.ViewModels.AboutPartViewModel
+            case 61:   //  Slave.ViewModels.AboutPartViewModel
                 userType = new global::Slave.Slave_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Template10.Mvvm.ViewModelBase"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 61:   //  Slave.Views.SettingsPage
+            case 62:   //  Slave.Views.SettingsPage
                 userType = new global::Slave.Slave_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_61_SettingsPage;
+                userType.Activator = Activate_62_SettingsPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 62:   //  Slave.Views.Shell
+            case 63:   //  Slave.Views.Shell
                 userType = new global::Slave.Slave_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_62_Shell;
+                userType.Activator = Activate_63_Shell;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 63:   //  Slave.Views.Splash
+            case 64:   //  Slave.Views.Splash
                 userType = new global::Slave.Slave_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 64:   //  Slave.App
+            case 65:   //  Slave.App
                 userType = new global::Slave.Slave_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Template10.Common.BootStrapper"));
-                userType.Activator = Activate_64_App;
+                userType.Activator = Activate_65_App;
                 userType.SetIsBindable();
                 userType.SetIsLocalType();
                 xamlType = userType;

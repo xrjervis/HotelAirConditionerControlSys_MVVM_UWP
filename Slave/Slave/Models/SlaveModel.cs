@@ -13,8 +13,8 @@ namespace Slave.Models
         /// <summary>
         /// 目标温度
         /// </summary>
-        private int _dTemp;
-        public int DTemp
+        private double _dTemp;
+        public double DTemp
         {
             get { return _dTemp; }
             set
@@ -25,8 +25,8 @@ namespace Slave.Models
         /// <summary>
         /// 当前温度
         /// </summary>
-        private int _cTemp;
-        public int CTemp
+        private double _cTemp;
+        public double CTemp
         {
             get { return _cTemp; }
             set
@@ -37,8 +37,8 @@ namespace Slave.Models
         /// <summary>
         /// 当前费用
         /// </summary>
-        private float _cost;
-        public float Cost
+        private double _cost;
+        public double Cost
         {
             get { return _cost; }
             set
@@ -82,6 +82,14 @@ namespace Slave.Models
                 Set(ref _isWorking, value);
             }
         }
+        /// <summary>
+        /// 初始化目标温度
+        /// </summary>
+        private double _InitDTemp;
+        public double InitDTemp
+        {
+            get { return _InitDTemp; }
+        }
         #endregion
 
         private static SlaveModel _slaveModel;
@@ -96,9 +104,10 @@ namespace Slave.Models
 
         public SlaveModel()
         {
-            _cost = 0.0f;
-            _cTemp = 29;
-            _dTemp = 25;
+            _cost = 0.0;
+            _cTemp = 29.0;
+            _dTemp = 25.0;
+            _InitDTemp = 29.0;
             _speed = "Medium";
             _workMode = "Cooling";
             _isWorking = true;

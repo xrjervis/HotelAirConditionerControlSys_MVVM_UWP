@@ -9,26 +9,26 @@
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>c868d65f-f547-4743-9c28-046e67cf3b16</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\Jervis\Desktop\Slave\Slave\obj\x86\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>6C69F39D8EE0E2ED9ACF71A299955D9EA2C05556EA1996E1560E0BD945CFA409</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>c868d65f-f547-4743-9c28-046e67cf3b16_1.0.0.0_x86__rbtjahz8x97y8</RegisteredPackageMoniker>
+    <IntermediateOutputPath>C:\Users\Jervis\OneDrive\HotelAirConditionerControlSys_MVVM_UWP\Slave\Slave\obj\x86\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>7C1BCB01E0BEC9823AC7685FC37BF76ADE7018921D66B6BFE4431232AD2DE45F</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>c868d65f-f547-4743-9c28-046e67cf3b16_1.0.1.0_x86__rbtjahz8x97y8</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>c868d65f-f547-4743-9c28-046e67cf3b16_rbtjahz8x97y8!App</RegisteredUserModeAppID>
     <RegisteredPackageID>c868d65f-f547-4743-9c28-046e67cf3b16</RegisteredPackageID>
     <RegisteredPackagePublisher>CN=Jervis</RegisteredPackagePublisher>
-    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <RegisteredVersion>1.0.1.0</RegisteredVersion>
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Jervis\Desktop\Slave\Slave\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Jervis\OneDrive\HotelAirConditionerControlSys_MVVM_UWP\Slave\Slave\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-06-06T03:47:41.849</Modified>
+      <Modified>2016-06-11T03:43:07.643</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Jervis\Desktop\Slave\Slave\bin\x86\Debug\Slave.exe">
+    <AppxPackagedFile Include="C:\Users\Jervis\OneDrive\HotelAirConditionerControlSys_MVVM_UWP\Slave\Slave\bin\x86\Debug\Slave.exe">
       <PackagePath>entrypoint\Slave.exe</PackagePath>
-      <Modified>2016-06-06T03:46:07.262</Modified>
+      <Modified>2016-06-11T03:42:37.626</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jervis\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -462,66 +462,74 @@
       <PackagePath>Template10Library.dll</PackagePath>
       <Modified>2016-05-19T10:47:34.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jervis\Desktop\Slave\Slave\Assets\Square150x150Logo.png">
-      <PackagePath>Assets\Square150x150Logo.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Jervis\OneDrive\HotelAirConditionerControlSys_MVVM_UWP\Slave\Slave\Assets\logo-44-on-768-white.png">
+      <PackagePath>Assets\logo-44-on-768-white.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-06-05T20:49:49.408</Modified>
+      <Modified>2016-06-07T23:49:05.289</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jervis\Desktop\Slave\Slave\Assets\Square150x150Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Jervis\OneDrive\HotelAirConditionerControlSys_MVVM_UWP\Slave\Slave\Assets\logo-44-on-768-white.scale-100.png">
+      <PackagePath>Assets\logo-44-on-768-white.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-07T23:49:05.289</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jervis\OneDrive\HotelAirConditionerControlSys_MVVM_UWP\Slave\Slave\Assets\logo-44-on-768-white.scale-150.png">
+      <PackagePath>Assets\logo-44-on-768-white.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-07T23:49:05.289</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jervis\OneDrive\HotelAirConditionerControlSys_MVVM_UWP\Slave\Slave\Assets\logo-44-on-768-white.scale-200.png">
+      <PackagePath>Assets\logo-44-on-768-white.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-07T23:49:05.289</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jervis\OneDrive\HotelAirConditionerControlSys_MVVM_UWP\Slave\Slave\Assets\Square150x150Logo.scale-100.png">
       <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-06-04T03:32:55.001</Modified>
+      <Modified>2016-06-07T23:46:39.748</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jervis\Desktop\Slave\Slave\Assets\Square150x150Logo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Jervis\OneDrive\HotelAirConditionerControlSys_MVVM_UWP\Slave\Slave\Assets\Square150x150Logo.scale-150.png">
       <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-06-04T03:32:54.993</Modified>
+      <Modified>2016-06-07T23:46:39.748</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jervis\Desktop\Slave\Slave\Assets\start.PNG">
+    <AppxPackagedFile Include="C:\Users\Jervis\OneDrive\HotelAirConditionerControlSys_MVVM_UWP\Slave\Slave\Assets\start.PNG">
       <PackagePath>Assets\start.PNG</PackagePath>
       <Modified>2016-06-04T08:11:23.571</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jervis\Desktop\Slave\Slave\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Jervis\OneDrive\HotelAirConditionerControlSys_MVVM_UWP\Slave\Slave\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2016-06-04T03:32:54.993</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jervis\Desktop\Slave\Slave\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Jervis\OneDrive\HotelAirConditionerControlSys_MVVM_UWP\Slave\Slave\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2016-06-04T03:32:54.996</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jervis\Desktop\Slave\Slave\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Jervis\OneDrive\HotelAirConditionerControlSys_MVVM_UWP\Slave\Slave\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2016-06-04T03:32:54.998</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jervis\Desktop\Slave\Slave\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Jervis\OneDrive\HotelAirConditionerControlSys_MVVM_UWP\Slave\Slave\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2016-06-04T03:32:54.999</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jervis\Desktop\Slave\Slave\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Jervis\OneDrive\HotelAirConditionerControlSys_MVVM_UWP\Slave\Slave\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2016-06-04T03:32:55.001</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jervis\Desktop\Slave\Slave\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Jervis\OneDrive\HotelAirConditionerControlSys_MVVM_UWP\Slave\Slave\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2016-06-04T03:32:55.001</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jervis\Desktop\Slave\Slave\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Jervis\OneDrive\HotelAirConditionerControlSys_MVVM_UWP\Slave\Slave\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2016-06-04T03:32:55.002</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jervis\Desktop\Slave\Slave\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Jervis\OneDrive\HotelAirConditionerControlSys_MVVM_UWP\Slave\Slave\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2016-06-04T03:32:55.434</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jervis\Desktop\Slave\Slave\bin\x86\Debug\Slave.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Jervis\OneDrive\HotelAirConditionerControlSys_MVVM_UWP\Slave\Slave\bin\x86\Debug\Slave.xr.xml">
       <PackagePath>Slave.xr.xml</PackagePath>
-      <Modified>2016-06-05T10:50:15.991</Modified>
+      <Modified>2016-06-08T08:30:03.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -563,13 +571,13 @@
       <PackagePath>Template10Library\Themes\Resizer.xaml</PackagePath>
       <Modified>2016-05-19T10:47:34.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jervis\Desktop\Slave\Slave\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Jervis\OneDrive\HotelAirConditionerControlSys_MVVM_UWP\Slave\Slave\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-06-06T03:47:41.623</Modified>
+      <Modified>2016-06-11T03:43:07.402</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jervis\Desktop\Slave\Slave\bin\x86\Debug\Core\Slave.exe">
+    <AppxPackagedFile Include="C:\Users\Jervis\OneDrive\HotelAirConditionerControlSys_MVVM_UWP\Slave\Slave\bin\x86\Debug\Core\Slave.exe">
       <PackagePath>Slave.exe</PackagePath>
-      <Modified>2016-06-06T03:47:41.847</Modified>
+      <Modified>2016-06-11T03:43:07.640</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

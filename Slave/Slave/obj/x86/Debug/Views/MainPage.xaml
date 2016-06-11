@@ -9,11 +9,14 @@
       xmlns:local="using:Slave.Views"
       xmlns:s="Slave.Services"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-      mc:Ignorable="d" Height="425.333" Width="874">
-
+      mc:Ignorable="d" Height="425.333" Width="1013"
+      xmlns:converters="using:Slave.Converters">
+    <Page.Resources>
+        <converters:StringFormatConverter x:Key="StringFormatConverter" />
+    </Page.Resources>
 
     <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:ConnectionId='2' x:Name="AdaptiveVisualStateGroup">
                 <VisualState x:ConnectionId='3' x:Name="VisualStateNarrow">
@@ -52,9 +55,9 @@
 
             <!--  secondary commands  -->
             <controls:PageHeader.SecondaryCommands>
-                <AppBarButton x:ConnectionId='23'                                  Label="设置" />
-                <AppBarButton x:ConnectionId='24'                                 Label="住客须知" />
-                <AppBarButton x:ConnectionId='25'                               Label="关于" />
+                <AppBarButton x:ConnectionId='22'                                  Label="设置" />
+                <AppBarButton x:ConnectionId='23'                                 Label="住客须知" />
+                <AppBarButton x:ConnectionId='24'                               Label="关于" />
             </controls:PageHeader.SecondaryCommands>
 
         </controls:PageHeader>
@@ -91,16 +94,12 @@
                      RelativePanel.AlignLeftWithPanel="True"
                      RelativePanel.AlignBottomWithPanel="True">
             <CommandBar.Content>
-                <TextBlock x:ConnectionId='20'                                            Margin="200,14" FontWeight="Bold" FontSize="18"/>
+                <TextBlock x:ConnectionId='20'                                                                                             Margin="200,14" FontWeight="Bold" FontSize="18"/>
             </CommandBar.Content>
 
             <AppBarButton x:ConnectionId='21' Icon="Sync" 
                           Label="风速"
                                                                    />
-            <AppBarButton x:ConnectionId='22' Icon="View"
-                          Label="工作模式"
-                                                                      />
-            <AppBarButton Icon="Switch" Label="送风模式"/>
 
         </CommandBar>
 
@@ -110,7 +109,7 @@
                    FontSize="18"
                    Margin="72,388,-72.333,-391"/>
 
-        <Grid Margin="0,48,-874,0" Height="329" VerticalAlignment="Top">
+        <Grid Margin="10,48,-1013,0" Height="329" VerticalAlignment="Top" HorizontalAlignment="Left" Width="1003">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0*"/>
                 <ColumnDefinition Width="297*"/>
@@ -125,46 +124,41 @@
                           VerticalAlignment="Top"
                           Height="329"/>
 
-            <TextBlock x:ConnectionId='8' x:Name="textBlock" 
-                       Grid.ColumnSpan="2"
+            <TextBlock x:ConnectionId='8' x:Name="textBlock"
                        HorizontalAlignment="Left"
-                       Margin="59,76,0,0"
+                       Margin="10,76,0,0"
                        TextWrapping="Wrap"
-                                                                 
+                                                                                                                  
                        VerticalAlignment="Top"
-                       FontSize="120" 
+                       FontSize="96" 
                        FontFamily="Kristen ITC"
                        Height="133" 
-                       Width="144"/>
+                       Width="218" Grid.Column="1"/>
 
-            <TextBlock x:ConnectionId='9' x:Name="textBlock2"
-                       Grid.ColumnSpan="2" 
-                       HorizontalAlignment="Left" 
-                       Margin="203,109,0,0"
+            <TextBlock x:ConnectionId='9' x:Name="textBlock2" 
+                       Margin="245,109,41,0"
                        TextWrapping="Wrap"
                        Text="°C"
                        VerticalAlignment="Top" 
                        FontFamily="Kristen ITC" 
                        FontWeight="Bold" 
                        FontSize="36" 
-                       Height="49"
-                       Width="55"/>
+                       Height="49" Grid.Column="1"/>
 
             <TextBlock x:ConnectionId='10' x:Name="textBlock_Copy"
                        HorizontalAlignment="Left" 
-                       Margin="52.667,76,0,0" 
+                       Margin="10,76,0,0" 
                        TextWrapping="Wrap"
-                                                                   
+                                                                                                                    
                        VerticalAlignment="Top" 
-                       FontSize="120" 
+                       FontSize="96" 
                        FontFamily="Kristen ITC" 
                        Height="133" 
-                       Width="142" 
+                       Width="214" 
                        Grid.Column="2"/>
 
-            <TextBlock x:ConnectionId='11' x:Name="textBlock2_Copy"
-                       HorizontalAlignment="Left" 
-                       Margin="195,109,0,0" 
+            <TextBlock x:ConnectionId='11' x:Name="textBlock2_Copy" 
+                       Margin="231,109,41.333,0" 
                        TextWrapping="Wrap" 
                        Text="°C" 
                        VerticalAlignment="Top" 
@@ -172,66 +166,58 @@
                        FontWeight="Bold"
                        FontSize="36" 
                        Grid.Column="2" 
-                       Height="49" 
-                       Width="50"/>
+                       Height="49"/>
 
             <Slider x:ConnectionId='12' x:Name="slider"
-                    Grid.ColumnSpan="2"
-                    HorizontalAlignment="Left"
-                    Margin="256,109,0,0"
-                    VerticalAlignment="Top" 
-                    Width="33" Maximum="30" 
+                    Margin="298,109,10,0"
+                    VerticalAlignment="Top" Maximum="30" 
                     Orientation="Vertical" 
                     Height="100"
-                                                                 Minimum="18"/>
+                                                                 Minimum="18" Grid.Column="1"/>
 
-            <Slider x:ConnectionId='13' x:Name="slider_Copy"
-                    HorizontalAlignment="Left" 
-                    Margin="240,109,0,0" 
+            <Slider x:ConnectionId='13' x:Name="slider_Copy" 
+                    Margin="279,109,10.333,0" 
                     VerticalAlignment="Top"
-                    Width="33"
                     Maximum="30"
                     Orientation="Vertical" 
                     Height="100"
                     Grid.Column="2" 
                     Minimum="18"
-                                                                     />
+                                                                     
+                                                                        SmallChange="0.5" StepFrequency="0.5" TickFrequency="1"/>
 
-            <TextBlock x:ConnectionId='14' x:Name="textBlock1" 
-                       Grid.ColumnSpan="2"
-                       Margin="10,290,193,0" 
+            <TextBlock x:ConnectionId='14' x:Name="textBlock1"
+                       Margin="6,290,193,0" 
                        TextWrapping="Wrap" 
                        Text="当前风速：" 
                        VerticalAlignment="Top"
                        Height="29" 
                        FontSize="18"
                        FontWeight="Bold"
-                       FontFamily="Script MT Bold"/>
+                       FontFamily="Script MT Bold" Grid.Column="1"/>
 
             <TextBlock x:ConnectionId='15' x:Name="textBlock1_Copy" 
-                       Grid.ColumnSpan="2" 
-                       Margin="109,290,158,0" 
+                       Margin="105,290,0,0" 
                        TextWrapping="Wrap"  
                                                                    
                        VerticalAlignment="Top"
                        Height="29" 
                        FontSize="18" 
                        FontWeight="Bold" 
-                       FontFamily="Script MT Bold"/>
+                       FontFamily="Script MT Bold" HorizontalAlignment="Left" Width="135" Grid.Column="1"/>
 
             <TextBlock x:ConnectionId='16' x:Name="textBlock1_Copy1"
-                       Grid.ColumnSpan="2"
-                       Margin="203,290,0,0" 
+                       Margin="0,290,187,0" 
                        TextWrapping="Wrap" 
                        Text="工作模式："
                        VerticalAlignment="Top" 
                        Height="29" 
                        FontSize="18" 
                        FontWeight="Bold"
-                       FontFamily="Script MT Bold"/>
+                       FontFamily="Script MT Bold" Grid.Column="2"/>
 
             <TextBlock x:ConnectionId='17' x:Name="textBlock1_Copy2"
-                       Margin="10,290,218,0"
+                       Margin="103,290,0,0"
                        TextWrapping="Wrap" 
                                                                     
                        VerticalAlignment="Top"
@@ -239,19 +225,18 @@
                        FontSize="18" 
                        FontWeight="Bold" 
                        FontFamily="Script MT Bold"
-                       Grid.Column="2"/>
+                       Grid.Column="2" HorizontalAlignment="Left" Width="178"/>
 
 
-            <TextBlock x:ConnectionId='18' x:Name="textBlock1_Copy5" 
-            	Grid.ColumnSpan="2"
-            	Margin="90,47,113,0" 
+            <TextBlock x:ConnectionId='18' x:Name="textBlock1_Copy5"
+            	Margin="86,47,113,0" 
             	TextWrapping="Wrap" 
             	Text="当前温度" 
             	VerticalAlignment="Top"
             	Height="29" 
             	FontSize="18"
             	FontWeight="Bold"
-            	FontFamily="Script MT Bold"/>
+            	FontFamily="Script MT Bold" Grid.Column="1"/>
             <TextBlock x:ConnectionId='19' x:Name="textBlock1_Copy6"
             	Margin="89,47,98,0" 
             	TextWrapping="Wrap" 

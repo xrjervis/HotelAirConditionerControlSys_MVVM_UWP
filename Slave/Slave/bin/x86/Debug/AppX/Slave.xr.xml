@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
+  <Roots.Interfaces>
+    <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
+  </Roots.Interfaces>
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="AboutPartViewModel" />
     <RootPropertyPathName Name="Version" />
@@ -80,12 +83,12 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Height" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Width" />
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="Background" />
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
-      <RootMethod Name="GetColumnSpan" />
-      <RootMethod Name="SetColumnSpan" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
     </RootType>
@@ -121,6 +124,7 @@
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension">
       <RootProperty Name="Mode" />
       <RootProperty Name="FallbackValue" />
+      <RootProperty Name="Converter" />
     </RootType>
     <RootType FullName="Slave.Views.Busy" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
@@ -128,6 +132,7 @@
       <RootProperty Name="Content" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
+      <RootProperty Name="Resources" />
       <RootProperty Name="Background" />
     </RootType>
     <RootType FullName="Slave.ViewModels.DetailPageViewModel" />
@@ -178,6 +183,7 @@
       <RootProperty Name="Orientation" />
     </RootType>
     <RootType FullName="Slave.Views.DetailPage" />
+    <RootType FullName="Slave.Converters.StringFormatConverter" />
     <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
       <RootProperty Name="Margin" />
       <RootProperty Name="Content" />
@@ -192,15 +198,17 @@
       <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Slider">
-      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Width" />
       <RootProperty Name="Maximum" />
       <RootProperty Name="Orientation" />
       <RootProperty Name="Height" />
       <RootProperty Name="Value" />
       <RootProperty Name="Minimum" />
+      <RootProperty Name="SmallChange" />
+      <RootProperty Name="StepFrequency" />
+      <RootProperty Name="TickFrequency" />
+      <RootEvent Name="PointerCaptureLost" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
       <RootProperty Name="Icon" />

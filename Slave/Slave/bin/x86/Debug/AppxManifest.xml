@@ -7,12 +7,12 @@
 
   有关程序包清单文件的详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=241727
  -->
-  <Identity Name="c868d65f-f547-4743-9c28-046e67cf3b16" Publisher="CN=Jervis" Version="1.0.0.0" ProcessorArchitecture="x86" />
+  <Identity Name="c868d65f-f547-4743-9c28-046e67cf3b16" Publisher="CN=Jervis" Version="1.0.1.0" ProcessorArchitecture="x86" />
   <mp:PhoneIdentity PhoneProductId="c868d65f-f547-4743-9c28-046e67cf3b16" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Slave</DisplayName>
     <PublisherDisplayName>Jervis</PublisherDisplayName>
-    <Logo>Assets\StoreLogo.png</Logo>
+    <Logo>Assets\logo-44-on-768-white.png</Logo>
   </Properties>
   <Dependencies>
     <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10240.0" MaxVersionTested="10.0.10586.0" />
@@ -22,8 +22,8 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="Slave.exe" EntryPoint="Slave.App">
-      <uap:VisualElements DisplayName="温控系统从控机" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="分布式温控系统从控机" BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" ShortName="从控机">
+      <uap:VisualElements DisplayName="温控系统从控机" Square150x150Logo="Assets\logo-44-on-768-white.png" Square44x44Logo="Assets\logo-44-on-768-white.png" Description="分布式温控系统从控机" BackgroundColor="transparent">
+        <uap:DefaultTile ShortName="从控机">
           <uap:ShowNameOnTiles>
             <uap:ShowOn Tile="square150x150Logo" />
           </uap:ShowNameOnTiles>
